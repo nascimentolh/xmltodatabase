@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix' => 'xml'], function () {
+
+    Route::get('/items', 'System\XML\ItemsController@index')->name('xml.items');
+    
+});
