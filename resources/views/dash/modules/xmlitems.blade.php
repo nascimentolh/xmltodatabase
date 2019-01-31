@@ -16,7 +16,8 @@
                         </h2>
                     </div>
                     <div class="body">
-                        <form action="/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('xml.items.send') }}" id="my-awesome-dropzone" class="dropzone" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="dz-message">
                                 <div class="drag-icon-cph">
                                     <i class="material-icons">touch_app</i>
@@ -24,7 +25,7 @@
                                 <h3>Arraste os arquivos ou clique.</h3>
                             </div>
                             <div class="fallback">
-                                <input name="file" type="file" multiple />
+                                <input name="files[]" type="file" multiple />
                             </div>
                         </form>
                     </div>
@@ -34,4 +35,10 @@
         <!-- #END# File Upload | Drag & Drop OR With Click & Choose -->    
 </div>
 
+@endsection
+
+@section('scripts')
+<script>
+    
+    </script>
 @endsection
