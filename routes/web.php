@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix' => 'xml'], function () {
+
+    Route::prefix('items')->group(function() {
+        Route::get('/', 'System\XML\ItemsController@index')->name('xml.items');
+        
+
+        Route::POST('/send', 'System\XML\ItemsController@sendXML')->name('xml.items.send');
+    });
+    
+    
+});
