@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWeaponItems extends Migration
+class CreateTableItems extends Migration
 {
     /**
      * Run the migrations.
@@ -19,6 +19,10 @@ class CreateWeaponItems extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('reference');
+            $table->string('weapon_type')->nullable();
+            $table->string('crystal_type')->nullable();
+            $table->string('material')->nullable();
+            $table->integer('price')->nullable();
             $table->timestamps();
         });
 
@@ -28,6 +32,11 @@ class CreateWeaponItems extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('reference');
+            $table->string('armor_type')->nullable();
+            $table->string('crystal_type')->nullable();
+            $table->string('bodypart')->nullable();
+            $table->string('material')->nullable();
+            $table->integer('price')->nullable();
             $table->timestamps();
         });
 
@@ -37,8 +46,10 @@ class CreateWeaponItems extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('reference');
+            $table->string('material')->nullable();
+            $table->integer('price')->nullable();
             $table->timestamps();
-        });        
+        });       
     }
 
     /**
@@ -48,6 +59,6 @@ class CreateWeaponItems extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weapon_items');
+        Schema::dropIfExists('table_items');
     }
 }

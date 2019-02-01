@@ -14,5 +14,8 @@
     <!-- Custom Css -->
     <link href="/dash/css/style.css" rel="stylesheet">
 
+    {{-- Awesome Fonts --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="/dash/css/themes/all-themes.css" rel="stylesheet" />

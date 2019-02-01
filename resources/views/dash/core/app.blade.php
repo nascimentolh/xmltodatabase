@@ -46,7 +46,6 @@
     
     @include('dash.core.js')
     @yield('scripts')
-
 </body>
 
 </html>
